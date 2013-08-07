@@ -38,9 +38,9 @@ typedef struct parserutils_inputstream_private {
 	void *pw;			/**< Client private data */
 } parserutils_inputstream_private;
 
-static inline parserutils_error parserutils_inputstream_refill_buffer(
+STATICINLINE parserutils_error parserutils_inputstream_refill_buffer(
 		parserutils_inputstream_private *stream);
-static inline parserutils_error parserutils_inputstream_strip_bom(
+STATICINLINE parserutils_error parserutils_inputstream_strip_bom(
 		uint16_t *mibenum, parserutils_buffer *buffer);
 
 /**

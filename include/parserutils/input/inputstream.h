@@ -23,6 +23,7 @@ extern "C"
 #include <parserutils/errors.h>
 #include <parserutils/functypes.h>
 #include <parserutils/types.h>
+#include <parserutils/parserutils.h>
 #include <parserutils/charset/utf8.h>
 #include <parserutils/utils/buffer.h>
 
@@ -89,7 +90,7 @@ parserutils_error parserutils_inputstream_peek_slow(
  * the data pointed to. Thus, any attempt to dereference the pointer after 
  * advancing past the data it points to is a bug.
  */
-static inline parserutils_error parserutils_inputstream_peek(
+STATICINLINE parserutils_error parserutils_inputstream_peek(
 		parserutils_inputstream *stream, size_t offset, 
 		const uint8_t **ptr, size_t *length)
 {
@@ -152,7 +153,7 @@ static inline parserutils_error parserutils_inputstream_peek(
  * \param stream  The stream whose position to advance
  * \param bytes   The number of bytes to advance
  */
-static inline void parserutils_inputstream_advance(
+STATICINLINE void parserutils_inputstream_advance(
 		parserutils_inputstream *stream, size_t bytes)
 {
 	if (stream == NULL)

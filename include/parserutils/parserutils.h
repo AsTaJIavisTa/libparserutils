@@ -17,6 +17,12 @@ extern "C"
 #include <parserutils/functypes.h>
 #include <parserutils/types.h>
 
+#ifdef _MSC_VER
+#define STATICINLINE static __inline
+#else
+#define STATICINLINE static inline
+#endif
+
 #ifdef __cplusplus
 }
 #endif

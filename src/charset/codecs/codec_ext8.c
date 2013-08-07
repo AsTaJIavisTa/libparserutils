@@ -72,16 +72,16 @@ static parserutils_error charset_ext8_codec_decode(
 		uint8_t **dest, size_t *destlen);
 static parserutils_error charset_ext8_codec_reset(
 		parserutils_charset_codec *codec);
-static inline parserutils_error charset_ext8_codec_read_char(
+STATICINLINE parserutils_error charset_ext8_codec_read_char(
 		charset_ext8_codec *c,
 		const uint8_t **source, size_t *sourcelen,
 		uint8_t **dest, size_t *destlen);
-static inline parserutils_error charset_ext8_codec_output_decoded_char(
+STATICINLINE parserutils_error charset_ext8_codec_output_decoded_char(
 		charset_ext8_codec *c,
 		uint32_t ucs4, uint8_t **dest, size_t *destlen);
-static inline parserutils_error charset_ext8_from_ucs4(charset_ext8_codec *c,
+STATICINLINE parserutils_error charset_ext8_from_ucs4(charset_ext8_codec *c,
 		uint32_t ucs4, uint8_t **s, size_t *len);
-static inline parserutils_error charset_ext8_to_ucs4(charset_ext8_codec *c,
+STATICINLINE parserutils_error charset_ext8_to_ucs4(charset_ext8_codec *c,
 		const uint8_t *s, size_t len, uint32_t *ucs4);
 
 /**
