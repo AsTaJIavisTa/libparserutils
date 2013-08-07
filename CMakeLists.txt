@@ -1,5 +1,6 @@
 project(libparserutils)
 set(LIB "libparserutils")
+set(${LIB}_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(${LIB}_PUBLIC_HEADERS
 	include/parserutils/errors.h
